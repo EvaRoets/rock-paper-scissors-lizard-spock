@@ -1,8 +1,69 @@
-/*Nice graphics*/
+body {
+    background-color: #7c6c82;
+}
 
-h1
+h1 {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas:
+    "header"
+    "gamefield"
+    "footer";
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+}
+
+
+
+
+button {
+    display:inline-block;
+    background-color: #7c6c82;
+    border: 10px solid #2e3351;
+    border-radius: 12px;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 32px;
+    margin: 150px;
+}
+
+button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+footer{
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+/*
+img
+.choices
 p
-
-.playbtn
 .compbtn
 .msgboard
+*/
+

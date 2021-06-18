@@ -3,17 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-<!-- header specifying the game -->
-<header>
-    <h1>Rock PAPER Scissors</h1>
-</header>
-<!-- three play buttons: rock-paper-scissors (html + CSS) -->
-<!-- one button random computer choice  (html + CSS-->
-<!-- message board-->
 
+<container>
+    <!-- header specifying the game -->
+    <header>
+        <h1>Rock Paper Scissors</h1>
+        <h3>(Lizard Spock)</h3>
+    </header>
+
+
+    <!-- three play buttons: rock-paper-scissors (html + CSS) -->
+    <div class="choices">
+        <div class="rock" id="rock">
+            <img src="1rock.png" alt="rock">
+            <span>Rock</span>
+        </div>
+        <div class="paper" id="paper">
+            <img src="2paper.png" alt="paper">
+        </div>
+        <div class="scissors" id="scissors" >
+            <img src="3scissors.png" alt="scissors">
+        </div>    <div class="spock" id="spock">
+        <img src="4spock.png" alt="spock">
+    </div>
+        <div class="lizard" id="lizard">
+            <img src="5lizard.png" alt="lizard">
+        </div>
+    </div>
+    <!-- one button random computer choice  (html + CSS-->
+    <div class="">
+        <img src="bot.gif" alt="">
+    </div>
+
+    <!-- scoreboard -->
+    <div class = "scoreboard">
+
+    </div>
+
+    <!-- message board-->
+    <div class = "result">
+    </div>
+
+    <!-- play again button -->
+    <button id="playAgain">Play again</button>
+    <script src="script.js"></script>
+    <footer>
+        &copy; BeCode - Eva Roets 2021
+    </footer>
+</container>
 </body>
 </html>
 
