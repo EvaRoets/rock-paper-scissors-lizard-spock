@@ -6,6 +6,7 @@ const lizard = document.getElementById("lizard");
 const spock =document.getElementById("spock");
 const pcVsPc =document.getElementById("pcVsPc");
 
+// register clicks - declare function
 // player's choice
 function getPlayerChoice () {
     rock.addEventListener("click", function () {
@@ -54,7 +55,7 @@ function getPlayerChoice () {
         pcVsPc.style.display = "none";
         //console.log("You clicked spock");
     });
-    //TODO change displayed name
+    //TODO change displayed name pcVsPc to "Computer fights computer" + delay of result?
     pcVsPc.addEventListener("click", function () {
         clickCapture("pcVsPc");
         rock.style.display = "none";
@@ -65,37 +66,85 @@ function getPlayerChoice () {
         console.log("You let the computer fight you battle");
     });
 }
-
 //computer's choice
 function getComputerChoice() {
     const playOptions = ["rock", "paper", "scissors", "spock", "lizard"]; // 4 indices, 5 length
     const randomChoice = [Math.floor(Math.random() * playOptions.length)];
     return playOptions[randomChoice];
 }
-
+//store clicks
 function clickCapture (playerChoice) {
     const computerChoice = getComputerChoice();
-    console.log("player choice => " + playerChoice);
-    console.log("computer choice => " + computerChoice);
+    console.log("You choose " + playerChoice);
+    console.log("The computer choose " + computerChoice);
 }
+//call function
 getPlayerChoice ();
+
+//compare scores - declare function
+function getResult() {
+    const result = document.getElementById("result");
+    // if -else OR switch?
+    if (playerChoice === computerChoice) {
+        result.style.display = "inline";
+        result.innerHTML = "It's a draw! Play again to collect more points.";
+    }
+    //YOU WIN
+    else if ()
+        //ROCK
+        //You win, rock crushes scissors!
+        //You win, rock crushes lizard!
+        //PAPER
+        //You win, paper disproves Spock!
+        //You win, paper covers rock!
+
+        //SCISSORS
+        //You win, scissors cuts paper!
+        //You win, scissors decapitate lizard!
+
+        //SPOCK
+        //You win, Spock smashes scissors!
+        //You win, Spock vaporizes rock!
+
+        //LIZARD
+        //You win, lizard poisons spock!
+        //You win, lizard eats paper!
+
+    //YOU LOOSE/Computer wins
+    else if ()
+        //ROCK
+        //You loose, paper covers rock!
+        //You loose, Spock vaporizes rock!
+
+        //PAPER
+        //You loose, scissors cuts paper!
+        //You loose, lizard eats paper!
+
+        //SCISSORS
+        //You loose, rock crushes scissors!
+        //You loose, Spock smashes scissors!
+
+        //SPOCK
+        //You loose, lizard poisons spock!
+        //You loose, paper disproves Spock!
+
+        //LIZARD
+        //You loose, scissors decapitate lizard!
+        //You loose, rock crushes lizard!
+
+        }
+
+//call function
+getResult();
+
 
 
 /*
-//
-
-// register click player/random computer choice
 //letsPlay();
 //function letsPlay(){ //
 
 
-function result() {
-    const result = document.getElementById("result");
 
-    if (playerChoice === computerChoice) {
-        result.style.display="inline";
-        result.innerHTML = `It's a draw! Play again.`;
-    }
     else if (playerChoice === 0 && computerChoice === 2) {
         result.style.display="inline";
         result.innerHTML = `You win`;
@@ -124,31 +173,6 @@ function result() {
 
 
 
-//ROCK
-//You win, rock crushes scissors!
-//You win, rock crushes lizard!
-//You loose, paper covers rock!
-//You loose, Spock vaporizes rock!
-//PAPER
-//You win, paper disproves Spock!
-//You win, paper covers rock!
-//You loose, scissors cuts paper!
-//You loose, lizard eats paper!
-//SCISSORS
-//You win, scissors cuts paper!
-//You win, scissors decapitate lizard!
-//You loose, rock crushes scissors!
-//You loose, Spock smashes scissors!
-//SPOCK
-//You win, Spock smashes scissors!
-//You win, Spock vaporizes rock!
-//You loose, lizard poisons spock!
-//You loose, paper disproves Spock!
-//LIZARD
-//You win, lizard poisons spock!
-//You win, lizard eats paper!
-//You loose, scissors decapitate lizard!
-//You loose, rock crushes lizard!
 
 
 // TODO phase 2
@@ -169,5 +193,7 @@ const displayComputerScore = document.getElementById("computerscore");
 // more player options (ex. high points, low chance)
 // nog if statements (=> switch/case)
 // make player win 75-100% of  games?
+
+
 
  */
