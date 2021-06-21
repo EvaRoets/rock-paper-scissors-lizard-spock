@@ -1,69 +1,69 @@
 // TODO register rock-paper-scissors buttons
-document.getElementById("rock").addEventListener("click", function() {
-    document.getElementById("paper").style.display="none";
-    document.getElementById("scissors").style.display="none";
-    document.getElementById("spock").style.display="none";
-    document.getElementById("lizard").style.display="none";
-});
 
-document.getElementById("paper").addEventListener("click", function() {
-    document.getElementById("rock").style.display="none";
-    document.getElementById("scissors").style.display="none";
-    document.getElementById("spock").style.display="none";
-    document.getElementById("lizard").style.display="none";
-});
+//List const
+//options
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+const lizard = document.getElementById("lizard");
+const spock =document.getElementById("spock");
+const playOptions = ["Rock", "Paper", "Scissors", "Spock", "Lizard"];
 
-document.getElementById("scissors").addEventListener("click", function() {
-    document.getElementById("rock").style.display="none";
-    document.getElementById("paper").style.display="none";
-    document.getElementById("spock").style.display="none";
-    document.getElementById("lizard").style.display="none";
-});
-
-document.getElementById("spock").addEventListener("click", function() {
-    document.getElementById("rock").style.display="none";
-    document.getElementById("paper").style.display="none";
-    document.getElementById("scissors").style.display="none";
-    document.getElementById("lizard").style.display="none";
-});
-
-document.getElementById("lizatd").addEventListener("click", function() {
-    document.getElementById("rock").style.display="none";
-    document.getElementById("paper").style.display="none";
-    document.getElementById("scissors").style.display="none";
-    document.getElementById("spock").style.display="none";
-});
-
-const playersChoice = document.getElementById("").value;
+//player's choice
+const playersChoice = document.getElementsByClassName("playerschoice");
 console.log (playersChoice);
 
-
-
-    document.getElementById("selectRock").addEventListener("click", function () {
-        userClicked(0)
-        document.getElementById("selectPaper").style.display="none";
-        document.getElementById("selectScissors").style.display="none";
-    });
-    document.getElementById("selectPaper").addEventListener("click", function () {
-        userClicked( 1)
-        document.getElementById("selectRock").style.display="none";
-        document.getElementById("selectScissors").style.display="none";
-    });
-    document.getElementById("selectScissors").addEventListener("click", function () {
-        userClicked(2)
-        document.getElementById("selectRock").style.display="none";
-        document.getElementById("selectPaper").style.display="none";
-    });
-
-
-
-
-
-// make compute choose random playoption
-const playOptions = ["Rock", "Paper", "Scissors", "Spock", "Lizard"]
+//computer's choice
 const computerChoice = playOptions[Math.floor(Math.random() * playOptions.length)];
-console.log(computerChoice, playOptions[computerChoice]);
-// register click random computer choice
+//console.log(computerChoice, playOptions[computerChoice]); // TODO can i replace array with reparate ids?
+
+//computer's choice vs computer's choice
+const computerPlayerChoice = playOptions[Math.floor(Math.random() * playOptions.length)];
+//console.log(computerPlayerChoice, playOptions[computerPlayerChoice]);
+
+//start function
+function letPlay() {
+}
+
+playersChoice.addEventListener("click", );
+
+// register click player/random computer choice
+rock.addEventListener("click", function() {
+    document.getElementById("paper").style.display="none";
+    document.getElementById("scissors").style.display="none";
+    document.getElementById("spock").style.display="none";
+    document.getElementById("lizard").style.display="none";
+});
+
+paper.addEventListener("click", function() {
+    document.getElementById("rock").style.display="none";
+    document.getElementById("scissors").style.display="none";
+    document.getElementById("spock").style.display="none";
+    document.getElementById("lizard").style.display="none";
+});
+
+scissors.addEventListener("click", function() {
+    document.getElementById("rock").style.display="none";
+    document.getElementById("paper").style.display="none";
+    document.getElementById("spock").style.display="none";
+    document.getElementById("lizard").style.display="none";
+});
+
+lizard.addEventListener("click", function() {
+    document.getElementById("rock").style.display="none";
+    document.getElementById("paper").style.display="none";
+    document.getElementById("scissors").style.display="none";
+    document.getElementById("spock").style.display="none";
+});
+
+spock.addEventListener("click", function() {
+    document.getElementById("rock").style.display="none";
+    document.getElementById("paper").style.display="none";
+    document.getElementById("scissors").style.display="none";
+    document.getElementById("lizard").style.display="none";
+});
+
+
 
 
 
@@ -101,6 +101,12 @@ console.log(computerChoice, playOptions[computerChoice]);
 
 // TODO phase 2
 // different end message styling depending on the outcome (remove/add classes in js) -- phase2
+const playerScore = 0; //TODO update
+const computerScore = 0;//TODO update
+const displayPlayerScore = document.getElementById("playerscore");
+const displayComputerScore = document.getElementById("computerscore");
+const result = document.getElementById("result");
+
 // play again button after game ended OK ---- > make it appear only after game
 // clean code (html, css, js) - delete redundant code or out of date comments
 // use functions to simplify code?
