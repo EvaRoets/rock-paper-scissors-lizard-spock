@@ -1,77 +1,138 @@
-// TODO register rock-paper-scissors buttons
-
-//List const
 //options
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const lizard = document.getElementById("lizard");
 const spock =document.getElementById("spock");
-const playOptions = ["Rock", "Paper", "Scissors", "Spock", "Lizard"];
 
-//player's choice
-const playersChoice = document.getElementsByClassName("playerschoice");
-console.log (playersChoice);
+/ player's choice
+const playerChoice = document.getElementsByClassName("playerchoice");
+console.log (playerChoice);
 
-//computer's choice
-const computerChoice = playOptions[Math.floor(Math.random() * playOptions.length)];
-//console.log(computerChoice, playOptions[computerChoice]); // TODO can i replace array with reparate ids?
-
-//computer's choice vs computer's choice
-const computerPlayerChoice = playOptions[Math.floor(Math.random() * playOptions.length)];
-//console.log(computerPlayerChoice, playOptions[computerPlayerChoice]);
-
-//start function
-function letPlay() {
+/ computer's choice
+function computerChoice () {
+    const playOptions = ["rock", "paper", "scissors", "spock", "lizard"]; // 4 indices, 5 length
+    const computerChoice = playOptions[Math.floor(Math.random() * playOptions.length)];
+    return playOptions[computerChoice];
 }
+console.log(computerChoice());
 
-playersChoice.addEventListener("click", );
+/ computer vs computer
+function computervscomputerChoice () {
+    const computervscomputerChoice = playOptions[Math.floor(Math.random() * playOptions.length)];
+    return playOptions[computervscomputerChoice];
+}
+console.log(computervscomputerChoice());
 
 // register click player/random computer choice
-rock.addEventListener("click", function() {
-    document.getElementById("paper").style.display="none";
-    document.getElementById("scissors").style.display="none";
-    document.getElementById("spock").style.display="none";
-    document.getElementById("lizard").style.display="none";
-});
+letsPlay();
+function letsPlay(){ //=main
 
-paper.addEventListener("click", function() {
-    document.getElementById("rock").style.display="none";
-    document.getElementById("scissors").style.display="none";
-    document.getElementById("spock").style.display="none";
-    document.getElementById("lizard").style.display="none";
-});
-
-scissors.addEventListener("click", function() {
-    document.getElementById("rock").style.display="none";
-    document.getElementById("paper").style.display="none";
-    document.getElementById("spock").style.display="none";
-    document.getElementById("lizard").style.display="none";
-});
-
-lizard.addEventListener("click", function() {
-    document.getElementById("rock").style.display="none";
-    document.getElementById("paper").style.display="none";
-    document.getElementById("scissors").style.display="none";
-    document.getElementById("spock").style.display="none";
-});
-
-spock.addEventListener("click", function() {
-    document.getElementById("rock").style.display="none";
-    document.getElementById("paper").style.display="none";
-    document.getElementById("scissors").style.display="none";
-    document.getElementById("lizard").style.display="none";
-});
+    function clickCapture (playerChoice) {
+        const computerChoice = computerChoice();
+    }
 
 
+    rock.addEventListener("click", function() {
+        paper.style.display="none";
+        scissors.style.display="none";
+        spock.style.display="none";
+        lizard.style.display="none";
+        computerChoice.style.display="none";
+        clickCapture ("rock");
+        console.log("You clicked rock");
+
+    });
+
+    paper.addEventListener("click", function() {
+        rock.style.display="none";
+        scissors.style.display="none";
+        spock.style.display="none";
+        lizard.style.display="none";
+        computerChoice.style.display="none";
+        clickCapture ("paper");
+        console.log("You clicked paper");
+    });
+
+    scissors.addEventListener("click", function() {
+        rock.style.display="none";
+        paper.style.display="none";
+        spock.style.display="none";
+        lizard.style.display="none";
+        computerChoice.style.display="none";
+        clickCapture ("scissors");
+        console.log("You clicked scissors");
+    });
+
+    lizard.addEventListener("click", function() {
+        rock.style.display="none";
+        paper.style.display="none";
+        scissors.style.display="none";
+        spock.style.display="none";
+        computerChoice.style.display="none";
+        clickCapture ("lizard");
+        console.log("You clicked lizard");
+    });
+
+    spock.addEventListener("click", function() {
+        rock.style.display="none";
+        paper.style.display="none";
+        scissors.style.display="none";
+        lizard.style.display="none";
+        computerChoice.style.display="none";7
+        clickCapture ("spock");
+        console.log("You clicked spock");
+    });
+
+    computerChoice.addEventListener("click", function() {
+        rock.style.display="none";
+        paper.style.display="none";
+        scissors.style.display="none";
+        spock.style.display="none";
+        lizard.style.display="none";
+        clickCapture (computerChoice())
+        console.log("You let the computer fight you battle");
+    });
+
+
+}
+
+
+function result() {
+    const result = document.getElementById("result");
+
+    if (playerChoice === computerChoice) {
+        result.style.display="inline";
+        result.innerHTML = `It's a draw! Play again.`;
+    }
+    else if (playerChoice === 0 && computerChoice === 2) {
+        result.style.display="inline";
+        result.innerHTML = `You win`;
+        playerScore++;
+    }
+
+
+    else if (playerChoice === 2 && computerChoice === 0) {
+        result.style.display="inline";
+        document.getElementById("result").innerHTML = `Computer wins`;
+        computerScore++;
+    }
+    else if (playerChoice < randomIcon) {
+        result.style.display="inline";
+        document.getElementById("result").innerHTML = `Computer wins`;
+        computerScore++;
+    }
+    else {
+        result.style.display="inline";
+        document.getElementById("result").innerHTML = `You win`
+        userScore++;
+    }
+    document.getElementById("playAgain").style.display="inline";
+}
+}
 
 
 
-
-// if else if else:Announce the winner through html message (no alert) = scoreboard?
-// Result - switch
-
-// It's a draw! Play again.
 //ROCK
 //You win, rock crushes scissors!
 //You win, rock crushes lizard!
@@ -105,7 +166,7 @@ const playerScore = 0; //TODO update
 const computerScore = 0;//TODO update
 const displayPlayerScore = document.getElementById("playerscore");
 const displayComputerScore = document.getElementById("computerscore");
-const result = document.getElementById("result");
+
 
 // play again button after game ended OK ---- > make it appear only after game
 // clean code (html, css, js) - delete redundant code or out of date comments
