@@ -4,98 +4,89 @@ const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const lizard = document.getElementById("lizard");
 const spock =document.getElementById("spock");
+const pcVsPc =document.getElementById("pcVsPc");
 
-/ player's choice
-const playerChoice = document.getElementsByClassName("playerchoice");
-console.log (playerChoice);
-
-/ computer's choice
-function computerChoice () {
-    const playOptions = ["rock", "paper", "scissors", "spock", "lizard"]; // 4 indices, 5 length
-    const computerChoice = playOptions[Math.floor(Math.random() * playOptions.length)];
-    return playOptions[computerChoice];
-}
-console.log(computerChoice());
-
-/ computer vs computer
-function computervscomputerChoice () {
-    const computervscomputerChoice = playOptions[Math.floor(Math.random() * playOptions.length)];
-    return playOptions[computervscomputerChoice];
-}
-console.log(computervscomputerChoice());
-
-// register click player/random computer choice
-letsPlay();
-function letsPlay(){ //=main
-
-    function clickCapture (playerChoice) {
-        const computerChoice = computerChoice();
-    }
-
-
-    rock.addEventListener("click", function() {
-        paper.style.display="none";
-        scissors.style.display="none";
-        spock.style.display="none";
-        lizard.style.display="none";
-        computerChoice.style.display="none";
-        clickCapture ("rock");
-        console.log("You clicked rock");
+// player's choice
+function getPlayerChoice () {
+    rock.addEventListener("click", function () {
+        clickCapture("rock");
+        paper.style.display = "none";
+        scissors.style.display = "none";
+        spock.style.display = "none";
+        lizard.style.display = "none";
+        pcVsPc.style.display = "none";
+        //console.log("You clicked rock");
 
     });
-
-    paper.addEventListener("click", function() {
-        rock.style.display="none";
-        scissors.style.display="none";
-        spock.style.display="none";
-        lizard.style.display="none";
-        computerChoice.style.display="none";
-        clickCapture ("paper");
-        console.log("You clicked paper");
+    paper.addEventListener("click", function () {
+        clickCapture("paper");
+        rock.style.display = "none";
+        scissors.style.display = "none";
+        spock.style.display = "none";
+        lizard.style.display = "none";
+        pcVsPc.style.display = "none";
+        //console.log("You clicked paper");
     });
-
-    scissors.addEventListener("click", function() {
-        rock.style.display="none";
-        paper.style.display="none";
-        spock.style.display="none";
-        lizard.style.display="none";
-        computerChoice.style.display="none";
-        clickCapture ("scissors");
-        console.log("You clicked scissors");
+    scissors.addEventListener("click", function () {
+        clickCapture("scissors");
+        rock.style.display = "none";
+        paper.style.display = "none";
+        spock.style.display = "none";
+        lizard.style.display = "none";
+        pcVsPc.style.display = "none";
+        //console.log("You clicked scissors");
     });
-
-    lizard.addEventListener("click", function() {
-        rock.style.display="none";
-        paper.style.display="none";
-        scissors.style.display="none";
-        spock.style.display="none";
-        computerChoice.style.display="none";
-        clickCapture ("lizard");
-        console.log("You clicked lizard");
+    lizard.addEventListener("click", function () {
+        clickCapture("lizard");
+        rock.style.display = "none";
+        paper.style.display = "none";
+        scissors.style.display = "none";
+        spock.style.display = "none";
+        pcVsPc.style.display = "none";
+        //console.log("You clicked lizard");
     });
-
-    spock.addEventListener("click", function() {
-        rock.style.display="none";
-        paper.style.display="none";
-        scissors.style.display="none";
-        lizard.style.display="none";
-        computerChoice.style.display="none";7
-        clickCapture ("spock");
-        console.log("You clicked spock");
+    spock.addEventListener("click", function () {
+        clickCapture("spock");
+        rock.style.display = "none";
+        paper.style.display = "none";
+        scissors.style.display = "none";
+        lizard.style.display = "none";
+        pcVsPc.style.display = "none";
+        //console.log("You clicked spock");
     });
-
-    computerChoice.addEventListener("click", function() {
-        rock.style.display="none";
-        paper.style.display="none";
-        scissors.style.display="none";
-        spock.style.display="none";
-        lizard.style.display="none";
-        clickCapture (computerChoice())
+    //TODO change displayed name
+    pcVsPc.addEventListener("click", function () {
+        clickCapture("pcVsPc");
+        rock.style.display = "none";
+        paper.style.display = "none";
+        scissors.style.display = "none";
+        spock.style.display = "none";
+        lizard.style.display = "none";
         console.log("You let the computer fight you battle");
     });
-
-
 }
+
+//computer's choice
+function getComputerChoice() {
+    const playOptions = ["rock", "paper", "scissors", "spock", "lizard"]; // 4 indices, 5 length
+    const randomChoice = [Math.floor(Math.random() * playOptions.length)];
+    return playOptions[randomChoice];
+}
+
+function clickCapture (playerChoice) {
+    const computerChoice = getComputerChoice();
+    console.log("player choice => " + playerChoice);
+    console.log("computer choice => " + computerChoice);
+}
+getPlayerChoice ();
+
+
+/*
+//
+
+// register click player/random computer choice
+//letsPlay();
+//function letsPlay(){ //
 
 
 function result() {
@@ -178,3 +169,5 @@ const displayComputerScore = document.getElementById("computerscore");
 // more player options (ex. high points, low chance)
 // nog if statements (=> switch/case)
 // make player win 75-100% of  games?
+
+ */
