@@ -65,156 +65,163 @@ play.addEventListener("click", function () {
 // result.innerHTML = "It's a draw! Play again to collect more points.";
 
 
-
 // console.log("player chooses" + playerChoice)
 // console.log("computer chooses" + computerChoice)
 
-    //possible outcomes
-    switch (playerChoice+computerChoice) {
-        case "rockrock":
-        case "paperpaper":
-        case "scissorsscisors":
-        case "SpockSpock":
-        case "lizardlizard":
-            draw();
-            console.log('draw')
-            break;
-        case ("rockscissors");
+//possible outcomes
+//YOU DRAW
+switch (playerChoice + computerChoice) {
+    case "rockrock":
+        console.log('draw');
 
-        }
-        //YOU WIN
-    //ROCK
-    else if (playerChoice === rock) {
-        if (computerChoice === scissors) {
-            result.innerHTML = `You win, rock crushes scissors!`; //replace with string literals
-            playerScore++;
-        }
-    }
-    else if (playerChoice === rock) {
-        if (computerChoice === lizard) {
-            result.innerHTML = `You win, rock crushes lizard!`; //replace with string literals
-            playerScore++;
-        }
-    }
-    //PAPER
-    else if (playerChoice === paper) {
-        if (computerChoice === Spock) {
-            result.innerHTML = `You win, paper disproves Spock!`; //replace with string literals
-            playerScore++;
-        }
-    }
-    else if (playerChoice === paper) {
-        if (computerChoice === rock) {
-            result.innerHTML = `You win, paper covers rock!`; //replace with string literals
-            playerScore++;
-        }
-    }
+    case "paperpaper":
+        console.log('draw');
 
-    //SCISSORS
-    else if (playerChoice === scissors) {
-        if (computerChoice === paper) {
-            result.innerHTML = `You win, scissors cuts paper!`; //replace with string literals
-            playerScore++;
-        }
-    }
-    else if (playerChoice === scissors) {
-        if (computerChoice === lizard) {
-            result.innerHTML = `You win, scissors decapitate lizard!`; //replace with string literals
-            playerScore++;
-        }
-    }
+    case "scissorsscisors":
+        console.log('draw');
 
-    //Spock
-    else if (playerChoice === Spock) {
-        if (computerChoice === scissors) {
-            result.innerHTML = `You win, Spock smashes scissors!`; //replace with string literals
-            playerScore++;
-        }
-    }
-    else if (playerChoice === Spock) {
-        if (computerChoice === rock) {
-            result.innerHTML = `You win, Spock vaporizes rock!`; //replace with string literals
-            playerScore++;
-        }
-    }
+    case "SpockSpock":
+        console.log('draw');
 
-    //LIZARD
-    else if (playerChoice === lizard) {
-        if (computerChoice === Spock) {
-            result.innerHTML = `You win, lizard poisons Spock!`; //replace with string literals
-            playerScore++;
-        }
-    }
-    else if (playerChoice === lizard) {
-        if (computerChoice === paper) {
-            result.innerHTML = `You win, lizard eats paper!`; //replace with string literals
-            playerScore++;
-        }
-    }
+    case "lizardlizard":
+        // draw();
+        console.log('draw')
+        break;
+    // case ("rockscissors")
+        ;
 
-        //YOU LOOSE
-    //ROCK
-    else if (playerChoice === rock) {
-        if (computerChoice === paper) {
+}
+
+//YOU WIN
+//ROCK
+else
+if (playerChoice === rock) {
+    if (computerChoice === scissors) {
+        result.innerHTML = `You win, rock crushes scissors!`; //replace with string literals
+        playerScore++;
+    }
+} else if (playerChoice === rock) {
+    if (computerChoice === lizard) {
+        result.innerHTML = `You win, rock crushes lizard!`; //replace with string literals
+        playerScore++;
+    }
+}
+//PAPER
+else if (playerChoice === paper) {
+    if (computerChoice === Spock) {
+        result.innerHTML = `You win, paper disproves Spock!`; //replace with string literals
+        playerScore++;
+    }
+} else if (playerChoice === paper) {
+    if (computerChoice === rock) {
+        result.innerHTML = `You win, paper covers rock!`; //replace with string literals
+        playerScore++;
+    }
+}
+
+//SCISSORS
+else if (playerChoice === scissors) {
+    if (computerChoice === paper) {
+        result.innerHTML = `You win, scissors cuts paper!`; //replace with string literals
+        playerScore++;
+    }
+} else if (playerChoice === scissors) {
+    if (computerChoice === lizard) {
+        result.innerHTML = `You win, scissors decapitate lizard!`; //replace with string literals
+        playerScore++;
+    }
+}
+
+//Spock
+else if (playerChoice === Spock) {
+    if (computerChoice === scissors) {
+        result.innerHTML = `You win, Spock smashes scissors!`; //replace with string literals
+        playerScore++;
+    }
+} else if (playerChoice === Spock) {
+    if (computerChoice === rock) {
+        result.innerHTML = `You win, Spock vaporizes rock!`; //replace with string literals
+        playerScore++;
+    }
+}
+
+//LIZARD
+else if (playerChoice === lizard) {
+    if (computerChoice === Spock) {
+        result.innerHTML = `You win, lizard poisons Spock!`; //replace with string literals
+        playerScore++;
+    }
+} else if (playerChoice === lizard) {
+    if (computerChoice === paper) {
+        result.innerHTML = `You win, lizard eats paper!`; //replace with string literals
+        playerScore++;
+    }
+}
+
+    //YOU LOOSE
+//ROCK
+else if (playerChoice === rock) {
+    if (computerChoice === paper) {
         result.innerHTML = `You loose, paper covers rock!`; //replace with string literals
         computerScore++;
-    }}
-    else if (playerChoice === rock && computerChoice === Spock) {
-        result.innerHTML = `You loose, Spock vaporizes rock!`; //replace with string literals
-        computerScore++;
     }
+} else if (playerChoice === rock && computerChoice === Spock) {
+    result.innerHTML = `You loose, Spock vaporizes rock!`; //replace with string literals
+    computerScore++;
+}
 
-    //PAPER
-    else if (playerChoice === paper) {
+//PAPER
+else if (playerChoice === paper) {
     if (computerChoice === scissors) {
         result.innerHTML = `You loose, scissors cuts paper!`; //replace with string literals
         computerScore++;
-    }}
-    else if (playerChoice === paper) {
+    }
+} else if (playerChoice === paper) {
     if (computerChoice === lizard) {
         result.innerHTML = `You loose, lizard eats paper!`; //replace with string literals
         computerScore++;
-    }}
+    }
+}
 
-    // SCISSORS
-    else if (playerChoice === scissors) {
+// SCISSORS
+else if (playerChoice === scissors) {
     if (computerChoice === rock) {
         result.innerHTML = `You loose, rock crushes scissors!`; //replace with string literals
         computerScore++;
-    }}
-    else if (playerChoice === scissors) {
+    }
+} else if (playerChoice === scissors) {
     if (computerChoice === Spock) {
         result.innerHTML = `You loose, Spock smashes scissors!`; //replace with string literals
         computerScore++;
-    }}
+    }
+}
 
-    // Spock
-    else if (playerChoice === Spock) {
+// Spock
+else if (playerChoice === Spock) {
     if (computerChoice === lizard) {
         result.innerHTML = `You loose, lizard poisons Spock!`; //replace with string literals
         computerScore++;
-    }}
-    else if (playerChoice === Spock) {
+    }
+} else if (playerChoice === Spock) {
     if (computerChoice === paper) {
         result.innerHTML = `You loose, paper disproves Spock!`; //replace with string literals
         computerScore++;
-    }}
+    }
+}
 
-    // LIZARD
-    else if (playerChoice === lizard) {
+// LIZARD
+else if (playerChoice === lizard) {
     if (computerChoice === scissors) {
         result.innerHTML = `You loose, scissors decapitate lizard!`; //replace with string literals
         computerScore++;
-    }}
-    else if (playerChoice === lizard) {
+    }
+} else if (playerChoice === lizard) {
     if (computerChoice === rock) {
         result.innerHTML = `You loose, rock crushes lizard!`; //replace with string literals
         computerScore++;
-    }}
+    }
 }
-
-
-
+}
 
 
 //playAgain.innerHTML
