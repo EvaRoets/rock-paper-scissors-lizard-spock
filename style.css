@@ -40,38 +40,6 @@ h1 {
     align-items: center;
 }
 
-/*.playerchoice {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    flex-wrap: wrap;*/
-/*    align-items: center;*/
-/*    justify-content: space-around;*/
-/*    padding-bottom: 20px;*/
-/*}*/
-
-/*.computerchoice {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: space-around;*/
-/*    padding-top: 20px;*/
-/*}*/
-
-.messageboard {
-    background-color: #7c6c82;
-    border-radius: 40px;
-    color: #bff0ec;
-    padding: 25px;
-    margin: 20px auto 20px auto;
-    font-size: 20px;
-    font-family: 'Source Code Pro', monospace;
-    line-height: 1;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 10px 18px #2e3351;
-}
-
-/*TODO make disappear before players hits play button*/
 
 
 button {
@@ -111,6 +79,65 @@ img:hover {
     cursor: pointer;
     box-shadow: 5px 10px 18px #bff0ec;
 }
+
+/*TODO make disappear before players hits play button*/
+.playerChoices{
+
+}
+.playerChoice {
+    background-color: #7c6c82;
+    border: solid 10px #7c6c82;
+    border-radius: 40px;
+    font-family: 'Source Code Pro', monospace;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 5px 10px 18px #2e3351;
+}
+
+.computerChoice {
+    background-color: #7c6c82;
+    border: solid 10px #7c6c82;
+    border-radius: 40px;
+    font-family: 'Source Code Pro', monospace;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 5px 10px 18px #2e3351;
+}
+
+/*TODO make disappear before players hits play button*/
+/*.messageboard {*/
+/*    display: flex;*/
+/*    background-color: #7c6c82;*/
+/*    color: #bff0ec;*/
+/*    padding: 25px;*/
+/*    margin: 20px auto 20px auto;*/
+/*    font-size: 20px;*/
+/*    font-family: 'Source Code Pro', monospace;*/
+/*    line-height: 1;*/
+/*    text-align: center;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+
+.result{
+    display: block;
+    background-color: #7c6c82;
+    border: solid 10px #7c6c82;
+    border-radius: 40px;
+    color: #bff0ec;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 25px;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto 20px auto;
+    box-shadow: 5px 10px 18px #2e3351;
+}
+
+
 
 footer {
     background-color: #bff0ec;
