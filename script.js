@@ -1,4 +1,5 @@
 //**VARIABLES**
+// const gameButtons = document.getElementsByClassName("gameButtons")
 const rock = document.getElementById("rock"); //player buttons
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
@@ -6,10 +7,12 @@ const lizard = document.getElementById("lizard");
 const Spock = document.getElementById("Spock");
 const play = document.getElementById("play");
 const result = document.getElementById("result");
-const computerOptions = ["rock", "paper", "scissors", "Spock", "lizard"]; //
+const gameOptions = ["rock", "paper", "scissors", "Spock", "lizard"]; //
 
-let playerScore = 0; //TODO update
-let computerScore = 0;//TODO update
+let playerScore = 0;
+let computerScore = 0;
+let playerLives = 0;
+let computerLives = 0;
 
 //**EVENTS**
 

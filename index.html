@@ -8,55 +8,43 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-<div class="gameboard">
-    <header>
-        <h1>Rock Paper Scissors</h1>
-        <h3>Lizard Spock</h3>
-    </header>
-    <div class="gamefield">
-        <div class="whitespace-left"></div>
-        <div class="gamebody">
-            <div class="gamebuttons">
-                <div class="playoptions">
-                    <div id="rock">
-                        <img src="1rock.png" alt="rock">
-                    </div>
-                    <div id="paper">
-                        <img src="2paper.png" alt="paper">
-                    </div>
-                    <div id="scissors" >
-                        <img src="3scissors.png" alt="scissors">
-                    </div>
-                    <div  id="lizard">
-                        <img src="4lizard.png" alt="lizard">
-                    </div>
-                    <div id="Spock">
-                        <img src="5spock.png" alt="spock">
-                    </div>
-                    <!--<div id="pcVsPc">
-                        <img src="bot.gif" alt="computer">
-                    </div>-->
-                </div>
-            </div>
-            <div class="play">
-                <button id="play">Play</button>
-            </div>
-            <div class="messageboard" id="msgboard">
-                <span id="playerScore">0</span>:<span id="computerScore">0</span><br/><br/>
-                <div class="result">
-                    <p>It's a draw! Play again.</p>
-                </div>
-            </div>
-            <div class="playagain">
-                <button id="playAgain">Play again</button>
-            </div>
+<header>
+    <h1>Rock Paper Scissors <br/>Lizard Spock</h1>
+</header>
+<div class="gameBody">
+    <div class="gameButtons">
+        <div id="rock">
+            <img src="1rock.png" alt="rock">
         </div>
-        <div class="whitespace-right"></div>
+        <div id="paper">
+            <img src="2paper.png" alt="paper">
+        </div>
+        <div id="scissors">
+            <img src="3scissors.png" alt="scissors">
+        </div>
+        <div id="lizard">
+            <img src="4lizard.png" alt="lizard">
+        </div>
+        <div id="Spock">
+            <img src="5spock.png" alt="spock">
+        </div>
+        <!--<div id="pcVsPc">
+            <img src="bot.gif" alt="computer">
+        </div>-->
     </div>
-    <footer>
-        &copy; BeCode - Eva Roets 2021
-    </footer>
+    <div class="playButton">
+        <button id="play">Play</button>
+    </div>
+    <div class="messageboard" id="msgboard">
+        <span id="playerScore">0</span>:<span id="computerScore">0</span><br/><br/>
+        <div class="result">
+            <p>It's a draw! Play again.</p>
+        </div>
+    </div>
 </div>
+<footer>
+    &copy; BeCode - Eva Roets 2021
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
