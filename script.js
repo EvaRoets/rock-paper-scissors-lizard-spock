@@ -10,7 +10,7 @@ const result = document.getElementById("result");
 const gameOptions = ["rock", "paper", "scissors", "Spock", "lizard"]; //
 
 let playerScore = 0;
-let computerScore = 0;
+let sheldonScore = 0;
 
 //**EVENTS**
 // when player pushes button, make other buttons disappear
